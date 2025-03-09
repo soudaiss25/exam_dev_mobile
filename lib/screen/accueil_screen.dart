@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+
+import '../model/liste_villes_page.dart';
 
 class AccueilPage extends StatelessWidget {
   const AccueilPage({super.key});
@@ -41,14 +42,17 @@ class AccueilPage extends StatelessWidget {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue.shade700,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 30, vertical: 15),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/home'); // Redirige vers l’écran principal
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ListeVillesPage()),
+                );
               },
               child: Text(
                 'Commencer',
