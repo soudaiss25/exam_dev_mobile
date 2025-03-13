@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
+import 'HomePage.dart';
+
 class AccueilPage extends StatelessWidget {
   const AccueilPage({super.key});
 
@@ -48,7 +50,7 @@ class AccueilPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/home'); // Redirige vers l’écran principal
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage())); // Redirige vers l’écran principal
               },
               child: Text(
                 'Commencer',
